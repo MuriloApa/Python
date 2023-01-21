@@ -81,18 +81,15 @@ def multiplica_matriz(m1, m2):
     """
         This function returns the  multiplication between m1 and m2
     """
-    result = False
     if len(m1[0]) == len(m2):
         result = []
         for i in range(len(m1)):
-            linha = []
-            for j in range(len(m2[0])):
-                soma = 0
+            result.append([])
+            for j in range(len(m2[i])):
+                result[i].append(0)
                 for k in range(len(m2)):
-                    soma += m1[i][k] * m2[k][j]
-                linha.append(soma)
-            result.append(linha)
-    return result
+                    result[i][j] += m1[i][k] * m2[k][j]
+        return result
 
 def le_multiplica():
     print("Para a primeira matriz")
