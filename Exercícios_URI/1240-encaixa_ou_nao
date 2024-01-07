@@ -1,0 +1,10 @@
+n = int(input())
+
+for i in range(n):
+	a, b = map(int, input().split(' '))
+	
+			
+	if a % 10**len(str(b)) == b:
+		print('encaixa')
+	else:
+		print('nao encaixa')	
